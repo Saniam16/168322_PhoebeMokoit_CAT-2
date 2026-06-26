@@ -2,14 +2,21 @@ function toggleVideo(){
 
     var video = document.getElementById("video");
 
-    if(video.style.display=="none"){
+    if(video.style.display == "none"){
 
-        video.style.display="block";
+        video.style.display = "block";
         video.play();
 
-    }else{
+    }
+    else if(video.paused){
 
-        video.style.display="none";
+        video.play();
+
+    }
+    else{
+
+        video.style.display = "none";
+
     }
 
 }
